@@ -2,6 +2,8 @@ import '../CSS_properties/Main.css';
 import greek_salad from '../icons_assets/greek_salad.jpg';
 import bruschetta from '../icons_assets/bruchetta.svg';
 import lemon_dessert from '../icons_assets/lemon dessert.jpg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Main() {
   return (
@@ -29,7 +31,10 @@ function Main() {
                 The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
               </p>
             </div>
-            <h4>Order a delivery</h4>
+            <div class="order-button">
+              <h4>Order a delivery</h4>
+              <FontAwesomeIcon icon={faCartPlus} className="cart-icon" />
+            </div>
           </li>
 
           <li>
@@ -43,7 +48,10 @@ function Main() {
                 Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh tomatoes and basil.
               </p>
             </div>
-            <h4>Order a delivery</h4>
+            <div class="order-button">
+              <h4>Order a delivery</h4>
+              <FontAwesomeIcon icon={faCartPlus} className="cart-icon" />
+            </div>
           </li>
 
           <li>
@@ -57,7 +65,10 @@ function Main() {
                 This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
               </p>
             </div>
-            <h4>Order a delivery</h4>
+            <div class="order-button">
+              <h4>Order a delivery</h4>
+              <FontAwesomeIcon icon={faCartPlus} className="cart-icon" />
+            </div>
           </li>
         </ul>
       </div>

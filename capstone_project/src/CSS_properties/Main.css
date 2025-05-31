@@ -23,6 +23,7 @@
     background-color: black;
     color: white;
     border: none;
+    cursor: pointer;
     border-radius: 5px;
     padding: 13px 40px;
 }
@@ -45,30 +46,35 @@
     background-color: #edefee;
 }
 
-.main-bottom-block ul li div {
+.main-bottom-block ul li .name-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
-.main-bottom-block ul li div h2 {
+.main-bottom-block ul li .name-price h2 {
     color: black
 }
 
 
-.main-bottom-block ul li div h3 {
+.main-bottom-block ul li .name-price h3 {
     color: #EE9972;
     font-size: 21px;
 }
 
-.main-bottom-block ul li div p {
+.main-bottom-block .recipe-description p {
+    padding: 10px;
     margin-top: -5px;
     font-size: 18px;
 }
 
-.main-bottom-block h4 {
-    font-size: 18px;
-    margin-top: -5px;
+.order-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.order-button .cart-icon{
     margin-left: 10px;
 }
