@@ -1,0 +1,74 @@
+.main {
+    display: flex;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.main-top-block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-top-block h1 {
+    flex-basis: 50%;
+    font-size: 30px;
+}
+
+.main-top-block button {
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 40px;
+}
+
+/*********   Bottom Block *********************/
+
+.main-bottom-block ul li img {
+    width: 267px;
+    height: 187px;
+    object-fit: cover;
+}
+
+.main-bottom-block ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.main-bottom-block ul li {
+    margin: 10px;
+    background-color: #edefee;
+}
+
+.main-bottom-block ul li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.main-bottom-block ul li div h2 {
+    color: black
+}
+
+
+.main-bottom-block ul li div h3 {
+    color: #EE9972;
+    font-size: 21px;
+}
+
+.main-bottom-block ul li div p {
+    margin-top: -5px;
+    font-size: 18px;
+}
+
+.main-bottom-block h4 {
+    font-size: 18px;
+    margin-top: -5px;
+    margin-left: 10px;
+}

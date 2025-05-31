@@ -1,9 +1,67 @@
+import '../CSS_properties/Main.css';
+import greek_salad from '../icons_assets/greek_salad.jpg';
+import bruschetta from '../icons_assets/bruchetta.svg';
+import lemon_dessert from '../icons_assets/lemon dessert.jpg';
+
 function Main() {
   return (
-    <main className="flex-1 p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome to the Main Component</h1>
-      <p>This is the main content area of the application.</p>
-    </main>
+    <div class="main">
+      <div class="main-top-block">
+        <h1 class="Specials">
+            Specials
+        </h1>
+
+        <button class="online-menu">
+          Online Menu
+        </button>
+      </div>
+
+      <div className="main-bottom-block">
+        <ul class="recipes">
+          <li>
+            <img class="recipe-image" src={greek_salad} alt="Greek Salad" />
+            <div class="name-price">
+              <h2 class="recipe-name">Greek Salad</h2>
+              <h3 class="recipe-price">$12.99</h3>
+            </div>
+            <div class="recipe-description">
+              <p class="recipe-text">
+                The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
+              </p>
+            </div>
+            <h4>Order a delivery</h4>
+          </li>
+
+          <li>
+            <img class="recipe-image" src={bruschetta} alt="Bruschetta" />
+            <div class="name-price">
+              <h2 class="recipe-name">Bruschetta</h2>
+              <h3 class="recipe-price">$5.99</h3>
+            </div>
+            <div class="recipe-description">
+              <p class="recipe-text">
+                Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh tomatoes and basil.
+              </p>
+            </div>
+            <h4>Order a delivery</h4>
+          </li>
+
+          <li>
+            <img class="recipe-image" src={lemon_dessert} alt="Lemon Dessert" />
+            <div class="name-price">
+              <h2 class="recipe-name">Lemon Dessert</h2>
+              <h3 class="recipe-price">$5.00</h3>
+            </div>
+            <div class="recipe-description">
+              <p class="recipe-text">
+                This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
+              </p>
+            </div>
+            <h4>Order a delivery</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
