@@ -5,6 +5,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     flex-direction: column;
+    color: #333333;
 }
 
 .main-top-block {
@@ -52,11 +53,6 @@
     align-items: center;
     padding: 10px;
 }
-
-.main-bottom-block ul li .name-price h2 {
-    color: black
-}
-
 
 .main-bottom-block ul li .name-price h3 {
     color: #EE9972;

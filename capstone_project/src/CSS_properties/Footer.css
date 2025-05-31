@@ -1,3 +1,9 @@
+.footer {
+    background-color: #F4F1DE;
+    padding: 50px 0;
+    color: #FBDABB;
+}
+
 .footer-content{
     display: flex;
     justify-content: space-around;
