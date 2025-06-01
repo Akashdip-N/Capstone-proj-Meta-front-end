@@ -1,4 +1,4 @@
-import { initializeTimes, updateTimes } from './components/AvailableTimes';
+import { initializeTimes, updateTimes } from './components/availableTimes';
 
 describe('initializeTimes', () => {
   test('should return correct initial time slots', () => {
