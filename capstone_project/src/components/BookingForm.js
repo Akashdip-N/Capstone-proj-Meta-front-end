@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../CSS_properties/BookingForm.css';
 
-function BookingForm() {
+function BookingForm({ availableTimes, dispatchTimes }) {
     const getTodayDate = () => {
         const today = new Date();
         const year = today.getFullYear();
@@ -9,15 +9,6 @@ function BookingForm() {
         const day = String(today.getDate()).padStart(2, '0');
         return `${year}-${month}-${day}`;
     };
-
-    const [availableTimes] = useState([
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'
-    ]);
 
     const [date_input, setDate] = useState(getTodayDate());
     const [time_input, setTime] = useState(availableTimes[0]);
@@ -33,6 +24,13 @@ function BookingForm() {
     const handleChangeOccasion = (event) => {
         setOccasion(event.target.value);
     };
+
+    const handleChangeDate = (e) => {
+        const newDate = e.target.value;
+        setDate(newDate);
+        dispatchTimes({ date: newDate });
+    };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -63,24 +61,26 @@ function BookingForm() {
                         type="date"
                         id="res-date"
                         value={date_input}
-                        onChange={(e) => setDate(e.target.value)}
+                        onChange={(e) => {
+                            const newDate = e.target.value;
+                            setDate(newDate);
+                            dispatchTimes({ date: newDate });
+                        }}
                     />
 
                     <label htmlFor="res-time">Choose time</label>
                     <select
-                        id="res-time"
-                        value={time_input}
+                        id="res-time" value={time_input}
                         onChange={handleChangeTime}
-                    >
-                        {
-                            availableTimes.map((time, index) => (
-                                <option key={index} value={time}>
-                                    {time}
-                                </option>
-                            ))
-                        }
+                    >{
+                            availableTimes.map(
+                                (time, index) => (
+                                    <option
+                                        key={index}
+                                        value={time}>{time}
+                                    </option>
+                                ))}
                     </select>
-
                     <label htmlFor="guests">Number of guests</label>
                     <p
                         style={{
