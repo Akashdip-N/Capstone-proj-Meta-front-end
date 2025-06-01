@@ -53,15 +53,11 @@ function BookingForm({ availableTimes, dispatchTimes }) {
     };
 
     return (
-        <div style={{ display: 'grid', gap: '-10px' }}>
+        <div className="booking-container">
             <h1>{isSubmitted ? "Reservation successful" : "Reservations"}</h1>
             <h2>{isSubmitted ? "" : "Book your reservation below"}</h2>
             {!isSubmitted && (
-                <form
-                    className="booking-form"
-                    style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
-                    onSubmit={handleSubmit}
-                >
+                <form className="booking-form" onSubmit={handleSubmit}>
                     <label htmlFor="res-date">Choose date</label>
                     <input
                         type="date"
@@ -125,7 +121,7 @@ function BookingForm({ availableTimes, dispatchTimes }) {
 
             {
                 reservationDetails && (
-                    <div style={{
+                    <div className="reservation-summary" style={{
                         border: '2px solid #4CAF50',
                         borderRadius: '10px',
                         marginTop: '-30px',
