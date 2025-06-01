@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../CSS_properties/BookingForm.css';
+import API from '../utils/ApiFunction';
 
 function BookingForm({ availableTimes, dispatchTimes }) {
     const getTodayDate = () => {
@@ -31,19 +32,24 @@ function BookingForm({ availableTimes, dispatchTimes }) {
         dispatchTimes({ date: newDate });
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const details = {
+        const formData = {
             date: date_input,
             time: time_input,
             guests: guests,
             occasion: occasion,
         };
 
-        setReservationDetails(details);
-        setIsSubmitted(true); // hide the form
+        const success = API.submitAPI(formData);
+
+        if (success) {
+            setReservationDetails(formData);
+            setIsSubmitted(true); // hide the form
+        } else {
+            alert('Reservation failed!');
+        }
     };
 
     return (
@@ -61,11 +67,7 @@ function BookingForm({ availableTimes, dispatchTimes }) {
                         type="date"
                         id="res-date"
                         value={date_input}
-                        onChange={(e) => {
-                            const newDate = e.target.value;
-                            setDate(newDate);
-                            dispatchTimes({ date: newDate });
-                        }}
+                        onChange={handleChangeDate}
                     />
 
                     <label htmlFor="res-time">Choose time</label>

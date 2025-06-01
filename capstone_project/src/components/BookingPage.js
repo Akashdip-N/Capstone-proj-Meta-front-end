@@ -1,23 +1,21 @@
 import { useReducer } from 'react';
 import BookingForm from './BookingForm';
 import '../CSS_properties/BookingPage.css';
+import API from '../utils/ApiFunction';
 
-const updateTimes = (state, action) => {
-    const selectedDate = action.date;
-
-    return [
-        "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"
-    ];
+export const initializeTimes = () => {
+    return API.fetchAPI(new Date());
 };
 
-const initializeTimes = () => {
-    return [
-        "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"
-    ];
+export const updateTimes = (state, action) => {
+    return API.fetchAPI(new Date(action.date));
 };
 
 const BookingPage = () => {
-    const [availableTimes, dispatchTimes] = useReducer(updateTimes, null, initializeTimes);
+    const [
+        availableTimes,
+        dispatchTimes
+    ] = useReducer(updateTimes, [], initializeTimes);
 
     return (
         <div id="BookingPage" className="booking-page">
