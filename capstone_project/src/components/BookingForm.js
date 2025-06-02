@@ -112,6 +112,7 @@ function BookingForm({ availableTimes, dispatchTimes }) {
 
                     <button
                         type="submit"
+                        aria-label="On Click"
                         disabled={guests < 1 || guests > 10}
                     >
                         Make Your reservation
@@ -122,15 +123,15 @@ function BookingForm({ availableTimes, dispatchTimes }) {
             {
                 reservationDetails && (
                     <div className="reservation-summary" style={{
-                        border: '2px solid #4CAF50',
+                        border: '2px solid #F4CE14',
                         borderRadius: '10px',
-                        marginTop: '-30px',
+                        margin: '30px 0px 0px 80px',
                         padding: '20px',
                         maxWidth: '200px',
                         backgroundColor: '#f9f9f9'
                     }}
                     >
-                        <h3>Reservation Complete</h3>
+                        <h3>Reservation Details</h3>
                         <p><strong>Date:</strong> {reservationDetails.date}</p>
                         <p><strong>Time:</strong> {reservationDetails.time}</p>
                         <p><strong>Guests:</strong> {reservationDetails.guests}</p>

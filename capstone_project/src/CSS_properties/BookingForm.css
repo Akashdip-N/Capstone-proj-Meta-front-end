@@ -1,16 +1,4 @@
-/* Full page center */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3f4f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-/* Form container */
 .booking-container {
   text-align: center;
   width: 100%;
@@ -21,7 +9,6 @@ body, html {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
 .booking-container h1 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -34,13 +21,11 @@ body, html {
   margin-bottom: 25px;
 }
 
-/* Form layout */
 .booking-form {
   display: grid;
   gap: 20px;
 }
 
-/* Label styling */
 .booking-form label {
   font-weight: 600;
   font-size: 0.95rem;
@@ -48,7 +33,6 @@ body, html {
   text-align: left;
 }
 
-/* Hint text */
 .booking-form p {
   margin-top: -12px;
   font-size: 0.8rem;
@@ -56,7 +40,6 @@ body, html {
   text-align: left;
 }
 
-/* Input & select styles */
 .booking-form input[type="date"],
 .booking-form input[type="number"],
 .booking-form select {
@@ -71,7 +54,7 @@ body, html {
 
 .booking-form input:focus,
 .booking-form select:focus {
-  border-color: #4CAF50;
+  border-color: #495E57;
   background-color: #fff;
   outline: none;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
@@ -88,7 +71,7 @@ body, html {
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background-color: #4CAF50;
+  background-color: #495E57;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -96,7 +79,8 @@ body, html {
 }
 
 .booking-form button:hover {
-  background-color: #45a049;
+  background-color: #F4CE14;
+  color: #495E57;
   transform: scale(1.02);
 }
 
@@ -109,7 +93,7 @@ body, html {
 .reservation-summary {
   margin-top: 30px;
   padding: 20px;
-  border: 2px solid #4CAF50;
+  border: 2px solid #495E57;
   background-color: #f0fff4;
   border-radius: 10px;
   text-align: left;
