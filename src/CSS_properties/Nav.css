@@ -1,0 +1,75 @@
+* {
+  font-family: 'Markazi Text', serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar .logo {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-bar ul li {
+  list-style: none;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #495E57;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a:focus {
+  background-color: #F4CE14;
+  color: #333333;
+}
+
+.nav-bar ul li a.active {
+  background-color: #EE9972;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .nav-bar ul li a {
+    width: 100%;
+    display: block;
+  }
+}
