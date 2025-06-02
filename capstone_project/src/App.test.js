@@ -1,19 +1,41 @@
-import { initializeTimes, updateTimes } from './components/availableTimes';
+import { initializeTimes } from './components/BookingPage';
+import { fetchAPI } from './utils/ApiFunction';
+
+// Mock fetchAPI
+jest.mock('./utils/ApiFunction', () => ({
+  fetchAPI: jest.fn()
+}));
 
 describe('initializeTimes', () => {
-  test('should return correct initial time slots', () => {
-    const expected = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    expect(initializeTimes()).toEqual(expected);
+  it('should return available times from fetchAPI', () => {
+    // Arrange
+    const mockTimes = ['17:00', '18:00', '19:00'];
+    fetchAPI.mockReturnValue(mockTimes);
+
+    // Act
+    const result = initializeTimes();
+
+    // Assert
+    expect(fetchAPI).toHaveBeenCalled();
+    expect(result).toEqual(mockTimes);
   });
 });
 
 describe('updateTimes', () => {
-  test('should return same values regardless of date (for now)', () => {
-    const state = ["17:00", "18:00", "19:00"];
-    const action = { date: "2025-06-01" };
-    const result = updateTimes(state, action);
+  it('should update available times based on selected date', () => {
+    // Arrange
+    const mockTimes = ['17:00', '18:00'];
+    const selectedDate = new Date('2025-06-01');
+    fetchAPI.mockReturnValue(mockTimes);
 
-    const expected = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    expect(result).toEqual(expected);
+    const prevState = ['17:00']; // previous state
+    const action = { type: 'UPDATE_TIMES', payload: selectedDate };
+
+    // Act
+    const newState = updateTimes(prevState, action);
+
+    // Assert
+    expect(fetchAPI).toHaveBeenCalledWith(selectedDate);
+    expect(newState).toEqual(mockTimes);
   });
 });
