@@ -20,15 +20,15 @@ The project involves creating a responsive web application that demonstrates pro
 - Figma (for design mockups and prototypes)
 
 ## Software Requirements
-- [Node.js]{https://nodejs.org/en} (version 14 or higher)
+- [Node.js](https://nodejs.org/en) (version 14 or higher)
 - A modern web browser (Chrome, Firefox, Safari, etc.)
-- Code editor such as [Visual Studio Code]{https://code.visualstudio.com/}
+- Code editor such as [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Getting Started
 To run the project locally, follow these steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Akashdip-N/Meta-Front-End-Developer.git
+    git clone https://github.com/Akashdip-N/Capstone-proj-Meta-front-end.git
     cd Meta-Front-End-Developer
     ```
 2. Setup the project:
