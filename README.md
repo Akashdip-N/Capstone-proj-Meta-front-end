@@ -89,8 +89,7 @@ For any questions or feedback, please contact:
 - **My Portfolio**: [Portfolio](https://akashdip-n.github.io/)
 
 ## Deployed Project
-If you are interested in checking my project, here is the [vercel link](https://capstone-proj-meta-front-eg1tp3ff1-akashdip-neogis-projects.vercel.app/#BookingPage)
-
+If you are interested in checking my project, here is the [vercel link](https://capstone-proj-meta-front-end.vercel.app/)
 
 ## Video Demonstration
 https://github.com/user-attachments/assets/4c2a24f9-7ab2-4270-a28a-59f8229786dd
