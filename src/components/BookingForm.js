@@ -64,6 +64,7 @@ function BookingForm({ availableTimes, dispatchTimes }) {
                         type="date"
                         id="res-date"
                         value={date_input}
+                        min={getTodayDate()}
                         onChange={handleChangeDate}
                     />
 

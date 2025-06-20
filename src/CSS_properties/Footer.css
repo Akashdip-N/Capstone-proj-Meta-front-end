@@ -19,7 +19,7 @@
 .footer-content img {
   max-width: 160px;
   height: auto;
-  margin: auto 0px;
+  margin: auto 0;
 }
 
 .footer-content h4 {
@@ -95,11 +95,17 @@
   color: #F4CE14;
 }
 
-/* Responsive: Stack on smaller screens */
+/* Tablet & small screen handling */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-content h4 {
     text-align: center;
   }
 
@@ -107,7 +113,57 @@
     margin: 0 auto;
   }
 
+  .footer-content img {
+    margin: 0 auto;
+  }
+
+  .footer-links ul,
+  .contact-details {
+    padding: 0;
+    text-align: center;
+  }
+
   .social-media ul {
     justify-content: center;
+  }
+}
+
+/* 📱 Extra mobile responsiveness */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer-content {
+    gap: 25px;
+    padding: 0 16px;
+  }
+
+  .footer-content img {
+    max-width: 120px;
+  }
+
+  .footer-content h4 {
+    font-size: 18px;
+  }
+
+  .footer-links ul li a {
+    font-size: 15px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .social-media ul li a {
+    font-size: 18px;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+
+  .footer-links ul li {
+    margin: 8px 0;
   }
 }

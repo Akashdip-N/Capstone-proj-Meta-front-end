@@ -7,15 +7,16 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Main() {
   return (
-    <div className="main">
+    <div className="main" id="menu">
       <div className="main-top-block">
         <h1 className="Specials">
             Specials
         </h1>
-
-        <button className="online-menu">
-          Online Menu
-        </button>
+        <a href="#menu">
+          <button className="online-menu" >
+            Online Menu
+          </button>
+        </a>
       </div>
 
       <div className="main-bottom-block">

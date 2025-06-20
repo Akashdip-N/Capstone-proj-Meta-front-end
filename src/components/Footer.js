@@ -13,11 +13,11 @@ function Footer() {
                     <div className="footer-links">
                         <h4>Navigation</h4>
                         <ul className="footer-nav-links">
-                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#Header">Home</a></li>
                             <li><a href="#Header">About</a></li>
                             <li><a href="#menu">Menu</a></li>
                             <li><a href="#BookingPage">Reservations</a></li>
-                            <li><a href="#order-online">Order Online</a></li>
+                            <li><a href="#menu">Order Online</a></li>
                             <li><a href="#login">Login</a></li>
                         </ul>
                     </div>

@@ -1,21 +1,31 @@
+import React, { useState } from 'react';
 import '../CSS_properties/Nav.css';
 import logo from '../icons_assets/Logo.svg';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Nav() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false);
+
     return (
-        <div className="nav-container">
-            <nav class='nav-bar'>
-                <img src={logo} className="logo" alt="Logo" />
-                <ul className="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#Header">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#BookingPage">Reservations</a></li>
-                    <li><a href="#order-online">Order Online</a></li>
-                    <li><a href="#login">Login</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav className="nav-bar">
+        <img src={logo} alt="Logo" className="logo" />
+
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
+            {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+            <li><a href="#Header" className="active" onClick={closeMenu}>Home</a></li>
+            <li><a href="#Header" onClick={closeMenu}>About</a></li>
+            <li><a href="#menu" onClick={closeMenu}>Menu</a></li>
+            <li><a href="#BookingPage" onClick={closeMenu}>Reservations</a></li>
+            <li><a href="#menu" onClick={closeMenu}>Order Online</a></li>
+            <li><a href="#login" onClick={closeMenu}>Login</a></li>
+        </ul>
+        </nav>
     );
 }
 

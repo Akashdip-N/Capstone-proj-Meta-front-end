@@ -1,19 +1,21 @@
-
 .booking-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .booking-container {
-  text-align: Left;
   width: 100%;
+  max-width: 600px;
   padding: 40px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .booking-container h1 {
@@ -34,7 +36,6 @@
 }
 
 .booking-form label {
-  margin-top: 10px;
   font-weight: 600;
   font-size: 0.95rem;
   color: #333;
@@ -52,13 +53,14 @@
 .booking-form input[type="number"],
 .booking-form select {
   margin-top: -10px;
-  width: 100;
+  width: 100%;
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
   background-color: #f9f9f9;
   transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 
 .booking-form input:focus,
@@ -73,7 +75,6 @@
 .booking-form select:hover {
   background-color: #f0f0f0;
 }
-
 
 .booking-form button {
   padding: 12px;
@@ -112,4 +113,42 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 30px 20px;
+  }
+
+  .booking-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .booking-container h2 {
+    font-size: 0.95rem;
+  }
+
+  .booking-form {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 25px 15px;
+  }
+
+  .booking-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .booking-container h2 {
+    font-size: 0.85rem;
+  }
+
+  .booking-form button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
 }

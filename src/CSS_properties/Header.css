@@ -12,88 +12,116 @@
   gap: 80px;
 }
 
-
 .Header-left-block {
-    max-width: 500px;
-    flex: 1 1 40%;
-    text-align: left;
+  max-width: 500px;
+  flex: 1 1 40%;
+  text-align: left;
 }
 
 .Header-left-block h1 {
-    font-size: 42px;
-    margin: 0 0 10px 0;
-    font-weight: bold;
-    line-height: 1.2;
-    color: #F4CE14;
+  font-size: 42px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #F4CE14;
 }
 
 .Header-left-block p {
-    font-size: 18px;
-    margin: 0;
-    opacity: 0.9;
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.9;
 }
 
 .Header-left-block .description {
-    font-size: 18px;
-    margin-top: 20px;
-    line-height: 1.6;
-    color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
 .Header-left-block .reserve-button {
-    background-color: #F4CE14;
-    color: #333;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #F4CE14;
+  color: #333;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .Header-left-block .reserve-button:hover {
-    background-color: #ffd60a;
-    transform: scale(1.05);
+  background-color: #ffd60a;
+  transform: scale(1.05);
 }
 
 .image {
-    flex: 1 1 40%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-    animation: fadeInUp 0.5s ease;
+  flex: 1 1 40%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  animation: fadeInUp 0.5s ease;
+  display: block;
 }
-
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Tablet view */
 @media (max-width: 768px) {
-    .Header {
-        flex-direction: column;
-        text-align: center;
-    }
+  .Header {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    height: auto;
+    padding: 40px 20px;
+  }
 
-    .Header-left-block {
-        margin: 0;
-    }
+  .Header-left-block {
+    max-width: 100%;
+    flex: none;
+  }
 
-    .image {
-        margin: 20px 0 0 0;
-        width: 100%;
-        max-width: 90vw;
-    }
+  .image {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 90vw;
+    display: block;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .Header-left-block h1 {
+    font-size: 32px;
+  }
+
+  .Header-left-block p,
+  .Header-left-block .description {
+    font-size: 16px;
+  }
+
+  .Header-left-block .reserve-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 }
